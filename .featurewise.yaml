@@ -1,7 +1,7 @@
 branches:
   only: master
   except: master
-  publish: False
+  publish: True
 releases: True
 domains:
 - schema:
