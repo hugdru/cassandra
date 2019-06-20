@@ -12,33 +12,33 @@ domains:
       Scaling Out - Adding Data Storage Capacity: automatic data rebalancing
       Request Load Balancing: client requests load balanced across coordinators
       Granularity of Write Locks: locks on updated objects only
-      Scalable Request Processing Architecture: any node acts as a coordinator
+      Scalable Request Processing Architecture: fully distributed - any node acts as a coordinator
     Consistency:
-      Object Level Atomic Updates: object level atomic updates
-      ACID Transactions: lightweight transactions
+      Object Level Atomic Updates: supported
+      ACID Transactions: lightweight transactions (e.g. compare and set)
       Distributed Transactions: not supported
       Durable Writes: supported
       Quorum Reads and Writes: in the client
       Number of Replicas to Read: in the client
       Number of Replicas to Write: in the client
-      Writes with Unavailable Replicas: "hinted handoffs: writes are applied later when a replica recovers"
+      Writes with Unavailable Replicas: hinted handoffs - writes are applied later when a replica recovers
       Read from Master Only: not applicable - peer to peer
       Resolving Write Conflicts: supported
     Query Language:
       API-based: supported
       Declarative Query Language: supported
-      REST/HTTP-based Queries: not suppported
-      Languages Supported: Java, C#, Python, Ruby, Javascript
+      REST/HTTP-based Queries: not supported
+      Languages Supported: [Java, C#, Python, Ruby, Javascript]
       Cursor-based Queries: supported
-      JOIN-style queries: not suppported
+      JOIN-style queries: not supported
       Complex Data Types: [lists, maps, sets, nested structures]
       Restrict Query Result Set Size: supported
       Key Matching Options: [exact, partial match]
       Sort Options: [ascending, descending]
-      Triggers: pre-commit
+      Triggers: [pre-commit]
       Data Object Expiry: supported
     Data Model:
-      Data model: Column
+      Data Model: Column
       Fixed Schema: required
       Opaque Data Objects: not required
       Hierarchical Data Objects: supported
@@ -49,11 +49,11 @@ domains:
       Query by Partial Keys: supported
       Query by Non-key Values: not supported
       Map Reduce API: integrated with an external framework
-      Indexed Text Search: support in a plug-in
+      Indexed Text Search: support in a plug-in (e.g. Solr)
     Data Replication:
       Replication Architecture: peer-to-peer
-      Replication for Backup: not suppported
-      Replication across Data Centers: supported in enterprise version only (data center aware)
+      Replication for Backup: not supported
+      Replication across Data Centers: supported by enterprise version only (data center aware)
       Replica Writes: [to any replica, to multiple replicas]
       Replica Reads: [from any replica, from multiple replicas]
       Read Repair: background
@@ -62,20 +62,20 @@ domains:
       Automatic New Master Election after Failure: not relevant
       Replica Recovery and Resynchronization: supported - automatic
     Data Distribution:
-      Data Distribution Architecture: peer-to-peer
+      Data Distribution Architecture: [peer-to-peer]
       Data Distribution Method: consistent hashing
-      Automatic Data Rebalancing: administrative rebalancing tools
+      Automatic Data Rebalancing: [administrative rebalancing tools]
       Physical Data Distribution: [single cluster, rack-aware on single cluster, multiple data centers]
       Query Architecture: distributed coordinator for shard key lookup
-      Queries using Non-Shard Key Value: secondary indexes
+      Queries using Non-Shard Key Value: [secondary indexes]
       Merging Query Results from Multiple Shards: [random order, paged from server]
     Security:
       Client Authentication: [custom user/password, LDAP, Kerberos, SSL]
-      Server authentication: SSL
+      Server Authentication: [SSL]
       Credential Store: [in database, external file]
       Role Based Security: supported
       Security Role Options: custom roles
-      Scope of Roles: cluster
+      Scope of Roles: [cluster]
       Database Encryption: supported
       Logging: configurable event logging
     Admin:
