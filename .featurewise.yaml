@@ -19,7 +19,7 @@ domains:
       Distributed Transactions: not supported
       Durable Writes: supported
       Quorum Reads and Writes: in the client
-      Number of Replicas to Read: in the client
+      Number of Replicas to Read: specified in the client
       Number of Replicas to Write: specified in the client
       Writes with Unavailable Replicas: hinted handoffs - writes are applied later when a replica recovers
       Read from Master Only: not applicable - peer to peer
@@ -74,7 +74,7 @@ domains:
       Server Authentication: [SSL]
       Credential Store: [in database, external file]
       Role Based Security: supported
-      Security Role Options: custom roles
+      Security Role Options: [custom roles]
       Scope of Roles: [cluster]
       Database Encryption: supported
       Logging: [configurable event logging]
